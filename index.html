@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Steganography Project</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Steganography Project</h1>
+			<hr>
+			<h2>Enter text to hide in the image</h2>
+			<textarea rows="4" cols="40" class="content" placeholder="Enter text to hide" style="resize: none;"></textarea>
+			<label for="files" class="labelFiles">Choose File:</label>
+			<input type="file" id="files" accept="image/*">
+			<div class="options">
+				<button class="encrypt">Hide the message</button>
+				<button class="extract">Extract message</button>
+			</div>
+		</header>
+		<main>
+			<div class="result">
+				<div class="cols">
+					<h2>Before Modification</h2>
+					<img src="" class="originalImage">
+				</div>
+				<div class="cols">
+					<h2>After Modification</h2>
+					<canvas id="imageCanvas"></canvas>
+				</div>
+			</div>
+			<button class="download hidden" href="" download>DOWNLOAD</button>
+			<div class="data-extracted hidden">
+				<h2>Selected image</h2>
+				<canvas id="imageCanvas2"></canvas>
+				<h2>Hidden data</h2>
+				<div class="notice">No hidden data found</div>
+				<textarea rows="4" cols="40" class="extracted-item" placeholder="Hidden data" style="resize: none;"></textarea>
+			</div>
+		</main>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
